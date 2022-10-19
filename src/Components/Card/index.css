@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 10px;
+}
+
+.Card {
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 15px;
+}
+
+.Card__image {
+  position: relative;
+  width: 100%;
+}
+
+.main-image {
+  border-radius: 25px;
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+}
+
+.overlay {
+  margin: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: hsl(178, 100%, 50%, 0.3);
+  cursor: pointer;
+  border-radius: 17px;
+}
+
+.Card__image:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.Card__text-title {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+}
+
+.Card__text-title-nr:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.Card__text-subtitle {
+  color: hsl(215, 51%, 70%);
+  font-weight: 300;
+}
+
+.Card__line {
+  width: 90%;
+  height: 1px;
+  border: none;
+  border-top: 1px solid #2f415b;
+}
+
+.Card__pricedays {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+}
+
+.Card__price {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  color: hsl(178, 100%, 50%);
+}
+
+.Card__price-icon, .Card__price-text {
+  padding: 0;
+}
+
+.Card__days {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  color: hsl(215, 51%, 70%);
+}
+
+.Card__days-icon, .Card__days-text {
+  padding: 0;
+}
+
+.Card__days-icon{
+  width: 20px;
+  height: 20px;
+}
+
+.Card__author {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  color: hsl(215, 51%, 70%);
+}
+
+.Card__author-avatar {
+  padding: 0;
+  width: 10%;
+  border: 1px solid white;
+  border-radius: 100%;
+}
+
+.Card__author a {
+  padding: 0;
+  color: hsl(0, 0%, 100%);
+}
+
+.Card__author a:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
