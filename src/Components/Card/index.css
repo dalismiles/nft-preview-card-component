@@ -19,7 +19,6 @@
 }
 
 .main-image {
-  border-radius: 25px;
   opacity: 1;
   display: block;
   width: 100%;
@@ -54,10 +53,21 @@
   transform: translate(-50%, -50%);
 }
 
+.Card__text{
+  padding:0 20px;
+  display: flex;
+  flex-direction: column;
+  gap:20px
+}
+
 .Card__text-title {
+  padding:0;
   color: hsl(0, 0%, 100%);
+  font-size: 20px;
   font-weight: 600;
 }
+
+.Card__text-title-nr {padding:0;}
 
 .Card__text-title-nr:hover {
   color: hsl(178, 100%, 50%);
@@ -65,26 +75,22 @@
 }
 
 .Card__text-subtitle {
+  padding:0;
   color: hsl(215, 51%, 70%);
+  font-size: 18px;
   font-weight: 300;
 }
 
-.Card__line {
-  width: 90%;
-  height: 1px;
-  border: none;
-  border-top: 1px solid #2f415b;
-}
-
 .Card__pricedays {
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  gap: 80px;
+  justify-content: space-between;
+  font-size: 15px;
 }
 
 .Card__price {
   display: flex;
-  flex-direction: row;
+  align-items: center;
   gap: 10px;
   color: hsl(178, 100%, 50%);
 }
@@ -93,9 +99,10 @@
   padding: 0;
 }
 
+
 .Card__days {
   display: flex;
-  flex-direction: row;
+  align-items: center;
   gap: 10px;
   color: hsl(215, 51%, 70%);
 }
@@ -109,26 +116,57 @@
   height: 20px;
 }
 
+.Card__line {
+  width: 90%;
+  height: 1px;
+  border: none;
+  border-top: 1px solid #2f415b;
+}
+
 .Card__author {
-  margin-left: 10px;
+  padding: 0;
+  margin: 0 0 20px 20px;
   display: flex;
   flex-direction: row;
+  align-self:flex-start;
+  align-items: center;
   color: hsl(215, 51%, 70%);
 }
 
 .Card__author-avatar {
   padding: 0;
-  width: 10%;
+  width: 30px;
+  height: 30px;
   border: 1px solid white;
   border-radius: 100%;
 }
 
+
 .Card__author a {
   padding: 0;
   color: hsl(0, 0%, 100%);
+  text-decoration: none;
 }
 
 .Card__author a:hover {
   color: hsl(178, 100%, 50%);
   cursor: pointer;
+}
+
+@media (max-width: 470px) {
+  .Card {
+    width: 275px;
+  }
+  .Card__text-title {
+    font-size: 16px;
+  }
+  .Card__text-subtitle {
+    font-size: 15px;
+  }
+  .Card__pricedays {
+    font-size: 12px;
+  }
+  .Card__author {
+    font-size: 10px;
+  }
 }

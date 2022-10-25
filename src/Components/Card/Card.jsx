@@ -9,32 +9,33 @@ const Card = () => {
   return (
     <div className="Card">
       <div className="Card__image">
-        <img className="main-image" src={Equilibrium} alt="Equilibrium" />
+        <img className="main-image" src={Equilibrium} alt="Equilibrium picture" /> 
         <div className="overlay">
           <img className="overlay-image" src={View} alt="View icon" />
         </div>
       </div>
       <div className="Card__text">
         <p className="Card__text-title">
-          Equilibrium <span className="Card__text-title-nr">#3429</span>{" "}
+          Equilibrium <span className="Card__text-title-nr">#3429</span>
         </p>
         <p className="Card__text-subtitle">
-          Our Equilibrium collection promotes balance and calm{" "}
+          Our Equilibrium collection promotes balance and calm
         </p>
       </div>
-      <hr className="Card__line" />
+      
       <div className="Card__pricedays">
         <div className="Card__price">
-          <img src={Ethereum} alt="eth icon" className="Card__price-icon" />
+          <img src={Ethereum} alt="" aria-hidden='true' className="Card__price-icon" />
           <p className="Card__price-text">0.041 ETH</p>
         </div>
         <div className="Card__days">
-          <img src={Clock} alt="clock icon" className="Card__days-icon" />
+          <img src={Clock} alt="" aria-hidden='true' className="Card__days-icon" />
           <p className="Card__days-text">3 days left</p>
         </div>
       </div>
+      <hr className="Card__line" />
       <div className="Card__author">
-        <img src={Avatar} alt="" className="Card__author-avatar" />
+        <img src={Avatar} alt="Card author avatar" className="Card__author-avatar" />
         <p className="Card__author-text">
           Creation of <a href="#">Jules Wyvern</a>
         </p>
